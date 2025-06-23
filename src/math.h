@@ -12,6 +12,8 @@ struct Vec2Int {
 struct Vec2 {
   float x, y;
 
+  Vec2() : x(0.0f), y(0.0f) {}
+
   Vec2(float x, float y) : x(x), y(y) {}
 
   Vec2 operator+(const Vec2 &v) const { return Vec2(x + v.x, y + v.y); }
@@ -27,6 +29,8 @@ struct Vec2 {
 
 struct Vec3 {
   float x, y, z;
+
+  Vec3() : x(0.0f), y(0.0f), z(0.0f) {}
 
   Vec3(float x, float y, float z) : x(x), y(y), z(z) {}
 
@@ -65,8 +69,7 @@ struct Mat4 {
   float m[16];
 
   Mat4() {
-    for (int i = 0; i < 16; ++i)
-      m[i] = 0.0f;
+    for (int i = 0; i < 16; ++i) m[i] = 0.0f;
   }
 
   Vec4 operator*(const Vec4 &v) const {

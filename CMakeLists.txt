@@ -7,6 +7,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(SOURCES
     src/framebuffer.cpp
     src/main.cpp
+    src/mesh.cpp
     src/stb_image_write.cpp
 )
 
